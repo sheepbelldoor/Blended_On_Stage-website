@@ -122,6 +122,7 @@ html,
 body {
   background: #fff;
   font-family: 'Poppins', sans-serif;
+  word-break: keep-all;
 }
 
 ::selection {
@@ -133,6 +134,7 @@ body {
   background: #343a3e;
   color: #fff;
 }
+
 
 @media (max-width: 991px) {
   html, body {
@@ -602,6 +604,7 @@ banner
   background-image: url(../images/banner_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   text-align: center;
   padding: 270px 0px 210px 0px;
   position: relative;
@@ -628,9 +631,8 @@ banner
 }
 
 .main-banner .next-show {
-  position: absolute;
+  position: relative;
   top: -165px;
-  left: 45.5%;
   transform: translateX(-50%);
   animation: move-up-down 3s infinite;
 }
@@ -804,6 +806,7 @@ Venues & Tickets
   display: inline-block;
   z-index: 1;
   width: 100%;
+  height: 400px;
 }
 
 .venue-item .down-content .left-content {
@@ -821,7 +824,7 @@ Venues & Tickets
   font-size: 20px;
   top: 5%;
   text-align: center;
-  font-family: 'NanumSquareRoundB';
+  font-family: 'AritaDotum-Semibold';
   color: #fff;
 }
 
@@ -830,7 +833,7 @@ Venues & Tickets
   top: 6%;
   font-size: 18px;
   text-align: center;
-  font-family: 'NanumSquareRoundR';
+  font-family: 'AritaDotum-Medium';
   color: #fff;
 }
 
@@ -904,136 +907,6 @@ Venues & Tickets
   font-size: 20px;
   font-style: normal;
 }
-
-
-/*
----------------------------------------------
-Coming Events
----------------------------------------------
-*/
-
-.coming-events {
-  background-color: #656c74;
-  padding: 120px 0px;
-  position: relative;
-}
-
-.coming-events .left-button {
-  text-align: center;
-  position: absolute;
-  width: 9%;
-  height: auto;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(124,131,139,0.3);
-}
-
-.coming-events .left-button .main-white-button {
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  position: absolute;
-  top: 50%;
-  margin-top: -22.5px;
-}
-
-.event-item .thumb img {
-  width: 100%;
-  overflow: hidden;
-}
-
-.event-item .down-content {
-  background-color: #fff;
-  padding: 30px;
-}
-
-.event-item .down-content h4 {
-  font-size: 22px;
-  font-weight: 700;
-  color: #2a2a2a;
-  margin-bottom: 25px;;
-}
-
-.event-item .down-content ul li {
-  font-size: 14px;
-  color: #2a2a2a;
-  font-weight: 300;
-  margin-bottom: 15px;;
-}
-
-.event-item .down-content ul li:last-child {
-  margin-bottom: 0px;
-}
-
-.event-item .down-content ul li i {
-  width: 20px;
-  text-align: center;
-  font-size: 18px;
-  color: #858b93;
-  display: inline-block;
-}
-
-
-
-/*
----------------------------------------------
-Subscribe
----------------------------------------------
-*/
-
-.subscribe {
-  background-color: #7c838b;
-  padding: 30px 0px;
-}
-
-.subscribe h4 {
-  font-size: 18px;
-  color: #fff;
-  font-weight: 600;
-  margin-top: 10px;
-}
-
-.subscribe form input {
-  padding: 5px 10px;
-  width: 100%;
-  background-color: transparent;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid rgba(250,250,250,0.5);
-  outline: none;
-  font-size: 14px;
-  color: #fff;
-  font-weight: 200;
-  margin-top: 5px;
-}
-
-.subscribe form ::-webkit-input-placeholder { /* Edge */
-  color: #fff;
-  font-weight: 200;
-}
-
-.subscribe form .main-dark-button {
-  display: inline-block;
-  font-size: 14px;
-  padding: 12px 18px;
-  background-color: #343a3e;
-  color: #fff;
-  text-align: center;
-  font-weight: 500;
-  text-transform: capitalize;
-  transition: all .3s;
-  border: none;
-  outline: none;
-  width: 100%;
-}
-
-.subscribe form .main-dark-button:hover {
-  background-color: #656c74;
-}
-
 
 /* 
 ---------------------------------------------
@@ -1153,7 +1026,6 @@ footer p.copyright {
   background-color: #656c74;
 }
 
-
 /*
 ---------------------------------------------
 About Us Page
@@ -1161,302 +1033,55 @@ About Us Page
 */
 
 .page-heading-about {
-  background-image: url(../images/banner_bg.jpg);
+  background-image: url(../images/banner_ticket_bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 110px 0px 410px 0px;
+  background-position: center center;
+  padding: 110px 0px;
+  height: 100%;
+  text-align: center;
 }
 
 .page-heading-about h2 {
   font-size: 50px;
   font-family: 'AritaDotum';
   color: #fff;
-  font-weight: 800;
-  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
 }
 
 .page-heading-about span {
   font-size: 20px;
+  font-family: 'AritaDotum';
+  font-weight: bold;
   color: #fff;
   font-weight: 300;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.about-item {
-  margin-top: -282px;
-}
-
-.about-item .left-image img {
-  width: 100%;
-  overflow: hidden;
-}
-
-.about-item .right-content {
-  margin-left: -30px;
-}
-
-.about-item .right-content img {
-  width: 100%;
-  overflow: hidden;
-}
-
-.about-item  .down-content {
-  background-color: #fff;
-  padding: 30px;
-  border-right: 1px dotted #d7dadc;
-  border-bottom: 1px dotted #d7dadc;
-}
-
-.about-item  .down-content h4 {
-  font-size: 22px;
-  font-weight: 700;
-  color: #2a2a2a;
-  margin-bottom: 20px;
-}
-
-.about-item  .down-content ul li {
-  font-size: 16px;
-  font-weight: 500;
-  color: #2a2a2a;
-  margin-bottom: 5px;
-}
-
-.about-item  .down-content span {
-  font-size: 14px;
-  color: #7c838b;
-  font-weight: 300;
-  display: block;
-  margin-top: 25px;;
-}
-
-.about-item  .down-content .main-dark-button {
-  margin-top: 25px;
-}
-
-.about-upcoming-shows {
-  margin-top: 120px;
-}
-
-.about-upcoming-shows h2 {
-  font-size: 30px;
-  font-weight: 800;
-  color: #2a2a2a;
-  margin-bottom: 25px;
-}
-
-.about-upcoming-shows h4 {
-  font-size: 22px;
-  font-weight: 700;
-  color: #2a2a2a;
-  margin-bottom: 25px;;
-}
-
-.about-upcoming-shows ul{
-  margin-bottom: 30px;
-}
-
-.about-upcoming-shows ul li {
-  font-size: 14px;
-  font-weight: 300;
-  margin-bottom: 10px;
-}
-
-.about-upcoming-shows p {
-  margin-bottom: 30px;;
-}
-
-.about-upcoming-shows .text-button {
-  margin-top: -15px;
-}
-
-.about-upcoming-shows .next-shows {
-  border: 1px dotted #d7dadc;
-  padding: 20px;;
-}
-
-.about-upcoming-shows .next-shows h4 {
-  display: inline-block;
-}
-
-.about-upcoming-shows .next-shows h4 i {
-  float: left;
-  display: inline-block;
-  margin-right: 10px;
-  height: 30px;
-}
-
-.about-upcoming-shows .next-shows ul {
-  margin-bottom: 0px;
-}
-
-.about-upcoming-shows .next-shows ul li {
-  border-bottom: 1px dotted #d7dadc;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-}
-
-.about-upcoming-shows .next-shows ul li:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-
-.about-upcoming-shows .next-shows ul li h5 {
-  font-size: 15px;
-  font-weight: 700;
-  color: #2a2a2a;
-  margin-bottom: 15px;;
-}
-
-.about-upcoming-shows .next-shows ul li span {
-  font-size: 14px;
-  font-weight: 300;
-  color: #2a2a2a;
-}
-
-.about-upcoming-shows .next-shows ul li .icon-button {
-  float: right;
-  margin-top: -35px;
-}
-
-.about-upcoming-shows .next-shows ul li .icon-button a {
-  width: 50px;
-  height: 50px;
-  background-color: #656c74;
-  color: #fff;
-  display: inline-block;
-  text-align: center;
-  line-height: 50px;
-  transition: all .3s;
-}
-
-.about-upcoming-shows .next-shows ul li .icon-button a:hover {
-  background-color: #858b93;
-}
-
-.also-like {
-  margin-top: 110px;
-  background-color: #f0f0f1;
-  padding-bottom: 100px;
-}
-
-.also-like h2 {
-  font-size: 30px;
-  font-weight: 800;
-  color: #2a2a2a;
-  margin-top: 100px;
-  margin-bottom: 40px;
-}
-
-.also-like .thumb {
-  position: relative;
-}
-
-.also-like .thumb .icons {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
-
-.also-like .thumb .icons ul li {
-  display: inline-block;
-  margin-left: 5px;
-}
-
-.also-like .thumb .icons ul li a {
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  text-align: center;
-  line-height: 30px;
-  color: #fff;
-  background-color: #656c74;
-  border-radius: 50%;
-  transition: all .3s;
-}
-
-.also-like .thumb .icons ul li a:hover {
-  background-color: #858b93;
-}
-
-.also-like .thumb .icons ul li a i {
-  font-size: 14px;
-}
-
-.also-like .like-item img {
-  width: 100%;
-  overflow: hidden;
-}
-
-.also-like .like-item .down-content {
-  background-color: #fff;
-  padding: 30px;
-}
-
-.also-like .like-item .down-content span {
-  font-size: 15px;
-  color: #2a2a2a;
-  font-weight: 500;
-  display: inline-block;
-}
-
-.also-like .like-item .down-content h4 {
-  font-size: 22px;
-  font-weight: 700;
-  color: #2a2a2a;
-  margin-top: 10px;
-}
-
-
-/*
----------------------------------------------
-Rent Venue Page
----------------------------------------------
-*/
-
-.page-heading-rent-venue {
-  background-image: url(../images/rent_venue_bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 110px 0px;
-  text-align: center;
-}
-
-.page-heading-rent-venue h2 {
-  font-size: 50px;
-  color: #fff;
-  font-weight: 800;
-  margin-bottom: 15px;
-}
-
-.page-heading-rent-venue span {
-  font-size: 20px;
-  color: #fff;
-  font-weight: 300;
-  padding: 0px 250px;
-  display: inline-block;
-}
-
-.rent-venue-tabs .heading-tabs {
+.about-tabs .heading-tabs {
   padding: 20px 0px;
   border-bottom: 1px dotted #d7dadc;
 }
 
-.rent-venue-tabs .heading-tabs .main-dark-button {
+.about-tabs .heading-tabs .main-dark-button {
   text-align: right;
 }
 
-.rent-venue-tabs #tabs ul {
+.about-tabs #tabs ul {
   margin-top: 10px;
   padding: 0;
 }
-.rent-venue-tabs #tabs ul li {
+.about-tabs #tabs ul li {
   display: inline-block;
   margin-right: 30px;
 }
-.rent-venue-tabs #tabs ul li:last-child {
+.about-tabs #tabs ul li:last-child {
   margin-right: 0px;
 }
-.rent-venue-tabs #tabs ul li a {
+.about-tabs #tabs ul li a {
   text-transform: capitalize;
   width: 100%;
   display: inline-block;
@@ -1465,17 +1090,17 @@ Rent Venue Page
   font-weight: 500;
   transition: all 0.3s;
 }
-.rent-venue-tabs #tabs ul .ui-tabs-active span {
+.about-tabs #tabs ul .ui-tabs-active span {
   background: #faf5b2;
   border: #faf5b2;
   line-height: 90px;
   border-bottom: none;
 }
-.rent-venue-tabs #tabs ul .ui-tabs-active a {
+.about-tabs #tabs ul .ui-tabs-active a {
   color: #656c74;
   position: relative;
 }
-.rent-venue-tabs #tabs ul .ui-tabs-active a:after {
+.about-tabs #tabs ul .ui-tabs-active a:after {
   width: 100%;
   height: 3px;
   background-color: #7c838b;
@@ -1484,35 +1109,35 @@ Rent Venue Page
   top: -32px;
   position: absolute;
 }
-.rent-venue-tabs #tabs ul .ui-tabs-active span {
+.about-tabs #tabs ul .ui-tabs-active span {
   color: #1e1e1e;
 }
-.rent-venue-tabs .tabs-content {
+.about-tabs .tabs-content {
   margin-top: 80px;
   text-align: left;
-  display: inline-block;
   transition: all 0.3s;
 }
-.rent-venue-tabs .tabs-content h4 {
+.about-tabs .tabs-content h4 {
+  font-family: 'AritaDotum';
   font-size: 30px;
   font-weight: 700;
   color: #2a2a2a;
   margin-bottom: 25px;
 }
-.rent-venue-tabs .tabs-content ul.list {
+.about-tabs .tabs-content ul.list {
   border-top: 1px dotted #d7dadc;
   border-bottom: 1px dotted #d7dadc;
   padding: 15px 0px!important;
   margin-top: 30px!important;
   display: block;
 }
-.rent-venue-tabs .tabs-content ul.list li {
+.about-tabs .tabs-content ul.list li {
   width: 28%;
   font-size: 14px;
   color: #7c838b;
 }
 
-.rent-venue-tabs .tabs-content #map h5 {
+.about-tabs .tabs-content #map h5 {
   font-size: 22px;
   font-weight: 700;
   color: #2a2a2a;
@@ -1520,23 +1145,23 @@ Rent Venue Page
   margin-bottom: 15px;
 }
 
-.rent-venue-tabs .tabs-content #map .text-button {
+.about-tabs .tabs-content #map .text-button {
   margin-top: 15px;
 }
 
-.rent-venue-application {
+.about-application {
   margin: 100px 0px;
 }
 
-.rent-venue-application .heading-text h4 {
+.about-application .heading-text h4 {
   font-size: 22px;
   font-weight: 700;
   color: #2a2a2a;
   margin-bottom: 50px;
 }
 
-.rent-venue-application .contact-form input,
-.rent-venue-application .contact-form textarea {
+.about-application .contact-form input,
+.about-application .contact-form textarea {
   color: #7a7a7a;
   font-size: 13px;
   border: 1px solid #ddd;
@@ -1552,24 +1177,24 @@ Rent Venue Page
   margin-bottom: 30px;
 }
 
-.rent-venue-application .contact-form textarea {
+.about-application .contact-form textarea {
   height: 150px;
   resize: none;
 }
 
-.rent-venue-application .contact-form ::-webkit-input-placeholder { /* Edge */
+.about-application .contact-form ::-webkit-input-placeholder { /* Edge */
   color: #7a7a7a;
 }
 
-.rent-venue-application .contact-form :-ms-input-placeholder { /* Internet Explorer 10-11 */
+.about-application .contact-form :-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: #7a7a7a;
 }
 
-.rent-venue-application .contact-form ::placeholder {
+.about-application .contact-form ::placeholder {
   color: #7a7a7a;
 }
 
-.rent-venue-application form .main-dark-button {
+.about-application form .main-dark-button {
   display: inline-block;
   font-size: 14px;
   padding: 12px 18px;
@@ -1583,13 +1208,15 @@ Rent Venue Page
   outline: none;
 }
 
-.rent-venue-application form .main-dark-button:hover {
+.about-application form .main-dark-button:hover {
   background-color: #656c74;
 }
 
+
+
 /*
 ---------------------------------------------
-Shows Events Page
+Tickets Page
 ---------------------------------------------
 */
 
@@ -1597,17 +1224,20 @@ Shows Events Page
   background-image: url(../images/banner_ticket_bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
   padding: 110px 0px;
   text-align: center;
 }
 
 .page-heading-shows-events h2 {
   font-size: 50px;
-  color: #fff;
-  font-weight: 800;
-  margin-bottom: 15px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   font-family: 'AritaDotum';
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
 }
 
 .page-heading-shows-events span {
@@ -2200,105 +1830,6 @@ Ticket Details Page
 }
 
 
-/*
--------------------------------
-Event Details Page
--------------------------------
-*/
-
-.shows-events-schedule {
-  margin-top: 0px;
-  padding-bottom: 100px;
-  background-color: #f0f0f1;
-}
-
-.shows-events-schedule ul li {
-  background-color: #fff;
-  padding: 30px 30px 25px 30px;
-  margin-bottom: 30px;
-}
-
-.shows-events-schedule ul li .title h4 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #2a2a2a;
-}
-
-.shows-events-schedule ul li .title span {
-  font-size: 14px;
-  font-weight: 700;
-  color: #656c74;
-}
-
-.shows-events-schedule ul li .time span {
-  font-size: 14px;
-  color: #2a2a2a;
-  font-weight: 300;
-  display: inline-block;
-  width: 200px;
-}
-
-.shows-events-schedule ul li .time span i {
-  color: #7c838b;
-  margin-right: 10px;
-  width: 15px;
-  height: 25px;
-  float: left;
-  font-size: 18px;
-}
-
-.shows-events-schedule ul li .place span {
-  font-size: 14px;
-  color: #2a2a2a;
-  font-weight: 300;
-  display: inline-block;
-}
-
-.shows-events-schedule ul li .place span i {
-  color: #7c838b;
-  margin-right: 10px;
-  width: 15px;
-  height: 25px;
-  float: left;
-  font-size: 18px;
-}
-
-.shows-events-schedule ul li .main-dark-button {
-  text-align: right;
-}
-
-.shows-events-schedule .pagination ul {
-  text-align: center;
-  width: 100%;
-  margin-top: 30px;
-}
-
-.shows-events-schedule .pagination ul li {
-  display: inline-block;
-  margin: 0px 10px!important;
-  padding: 0px;
-  background-color: transparent;
-}
-
-.shows-events-schedule .pagination ul li a {
-  display: inline-block;
-  font-size: 14px;
-  padding: 12px 20px;
-  background-color: #fff;
-  color: #2a2a2a;
-  text-align: center;
-  font-weight: 500;
-  text-transform: capitalize;
-  transition: all .3s;
-}
-
-.shows-events-schedule .pagination ul li a:hover,
-.shows-events-schedule .pagination ul li.active a {
-  background-color: #343a3e;
-  color: #fff!important;
-}
-
-
 /* 
 ---------------------------------------------
 preloader
@@ -2479,12 +2010,12 @@ responsive
     margin-bottom: 30px;
   }
 
-  .page-heading-rent-venue span,
+  .page-heading-about span,
   .page-heading-shows-events span {
     padding: 0px;
   }
 
-  .rent-venue-tabs .heading-tabs .main-dark-button,
+  .about-tabs .heading-tabs .main-dark-button,
   .shows-events-tabs .heading-tabs .main-dark-button {
     display: none;
   }
@@ -2543,7 +2074,7 @@ responsive
 
 @media (max-width: 450px) {
 
-  .rent-venue-tabs #tabs ul li {
+  .about-tabs #tabs ul li {
     text-align: center;
     margin-right: 0px;
     display: block;
@@ -2551,16 +2082,16 @@ responsive
     margin-top: 5px;
   } 
 
-  .rent-venue-tabs #tabs ul .ui-tabs-active a:after,
+  .about-tabs #tabs ul .ui-tabs-active a:after,
   .shows-events-tabs #tabs ul .ui-tabs-active a:after {
     display: none;
   }
 
-  .rent-venue-tabs .tabs-content ul.list {
+  .about-tabs .tabs-content ul.list {
     text-align: center;
   }
 
-  .rent-venue-tabs .tabs-content ul.list li {
+  .about-tabs .tabs-content ul.list li {
     text-align: center;
     width: 100%;
   }
