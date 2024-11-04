@@ -1119,6 +1119,23 @@ About Us Page
 }
 .about-tabs .tabs-content h4 {
   font-family: 'AritaDotum';
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 25px;
+}
+.about-tabs .tabs-content h5 {
+  font-family: 'AritaDotum';
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 25px;
+}
+.about-tabs .tabs-content h6 {
+  font-family: 'AritaDotum';
+  margin-top: 20px;
   font-size: 30px;
   font-weight: 700;
   color: #2a2a2a;
